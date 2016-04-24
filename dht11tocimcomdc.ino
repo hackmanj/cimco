@@ -12,7 +12,7 @@ byte server[] = { 192, 168, 89, 241 }; //This is the IP address of your DNC Max 
 
 EthernetClient client;
 
-//DHT11 Goodies, Need to access A0 on the Uno to get Temp/Humid
+//DHT11 Stuff, Need to access A0 on the Uno to get Temp/Humid
 #define dht_apin A0 // Analog Pin sensor is connected to
  
 dht DHT;
