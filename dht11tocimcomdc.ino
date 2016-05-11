@@ -1,4 +1,5 @@
 // written by Joe Hackman - www.managedsolutions.com GPL v3 License
+// sensor data is ficticiously inputted as Coolant Temperature, example for informational purposes
 #include <dht.h>
 #include <SPI.h>
 #include <Ethernet.h>
@@ -26,8 +27,6 @@ Serial.println("connecting...");
 
   if (client.connect(server, 4442)) {
     Serial.println("connected");
-    //Replace or remove next line
-    //client.println("GET /search?q=arduino HTTP/1.0");
     client.println();
   } else {
     Serial.println("connection failed");
