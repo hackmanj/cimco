@@ -1,0 +1,12 @@
+# CIMCO MDC Max Messages Using Python
+# Written by Joe Hackman http://managedsolutions.com
+import socket
+
+HOST = '192.168.89.241'    # The IP of the DNC Max Server
+PORT = 4442              # The default port for API
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect((HOST, PORT))
+s.sendall(b'MONITORMESSAGE\nPORTID:DOOSAN\nFILECOUNT:1\nFILE:PARTCOMPLETE\n')
+data = s.recv(1024) 
+s.close()
+print('Received', repr(data)) # Useful for debugging
